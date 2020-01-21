@@ -25,7 +25,6 @@
 
 #define MAXL 200
 
-
 typedef struct {
     int x;
     int y;
@@ -42,8 +41,8 @@ void InitPoints(){
 
 	for(int i=0; i<MAXL; i++){
 		if(i<N){
-			Ps[i].x = rand()%250;
-			Ps[i].y = rand()%250;
+			Ps[i].x = rand()%200;
+			Ps[i].y = rand()%200;
 		}
 		else{
 			Ps[i].x = -1;
@@ -325,7 +324,7 @@ int main(int argc,char *argv[]){
 
 	t = clock() - t;
 	time_taken = ((double) t)/CLOCKS_PER_SEC;
-	printf("Waktu yang diperlukan: %fs\n\n", time_taken);
+	printf("Waktu yang diperlukan: %f ms\n\n", time_taken*1000);
 	
 	SortPoints();
 
